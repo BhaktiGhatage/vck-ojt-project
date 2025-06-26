@@ -4,12 +4,12 @@ import HomePage from "./pages/HomePage";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import ContactPage from "./pages/ContactPage";
-import "./styles/pages.css";   
+import "/src/styles/pages.css";   
 import AboutPage from "./pages/AboutPage";
 import CoursesPage from "./pages/CoursesPage";
 import AdmissionsPage from "./pages/AdmissionsPage";
 import NotFoundPage from "./pages/NotFoundPage";
-import ChatbotComponent from "./components/Chatbot/ChatbotComponent";
+import ChatbotComponent from "./components/Chatboat/ChatboatComponent";
 
 function App() {
   return (
