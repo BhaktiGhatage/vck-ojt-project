@@ -9,7 +9,7 @@ import AboutPage from "./pages/AboutPage";
 import CoursesPage from "./pages/CoursesPage";
 import AdmissionsPage from "./pages/AdmissionsPage";
 import NotFoundPage from "./pages/NotFoundPage";
-import ChatbotComponent from "./components/Chatboat/ChatboatComponent";
+import ChatboatComponent from "./components/Chatboat/ChatboatComponent";
 
 function App() {
   return (
@@ -25,7 +25,7 @@ function App() {
             <Route path="/admissions" element={<AdmissionsPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
-          <ChatbotComponent/>
+          <ChatboatComponent/>
         </div>
         <Footer />
       </div>
