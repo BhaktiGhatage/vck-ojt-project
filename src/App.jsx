@@ -1,54 +1,36 @@
-
-
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
-// Pages
-import HomePage from './pages/HomePage';
-import AboutPage from './pages/AboutPage';
-import AdmissionsPage from './pages/AdmissionsPage';
-import ContactPage from './pages/ContactPage';
-import CoursesPage from './pages/CoursesPage';
-
-import NotFoundPage from './pages/NotFoundPage';
-// import ChatbotComponent from './components/Chatbot/ChatbotComponents';
-// import DeveloperInfoPopup from './components/Developerlnfo/DeveloperInfoPopup';
+// src/App.jsx
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import ContactPage from "./pages/ContactPage";
+import "./styles/pages.css";
+import AboutPage from "./pages/AboutPage";
+import CoursesPage from "./pages/CoursesPage";
+import AdmissionsPage from "./pages/AdmissionsPage";
+import NotFoundPage from "./pages/NotFoundPage";
+import ChatbotComponent from "./components/Chatboat/ChatboatComponent";
 
 function App() {
-  // const [showPopup, setShowPopup] = useState(true);
-
-  // const handleClosePopup = () => {
-  //   setShowPopup(false);
-  // };
   return (
-    <>
-    <div>
-        {/* Your main application content */}
-        {/* <DeveloperInfoPopup
-          show={showPopup}
-          onClose={handleClosePopup}
-          studentName="Bhakti Daulatrao Ghatage"
-          studentPhotoUrl="\Images\1000133327-02.jpeg" // Path to their photo
-          uniqueMessage="Learned so much during this OJT! This app showcases my independent coding and deployment skills"
-        /> */}
-      </div>
     <Router>
-     
-      
-      <main style={{ padding: '1rem' }}>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/apply" element={<AdmissionsPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-           <Route path="/courses" element={<CoursesPage/>} />
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>
-      </main>
-    {/* <ChatbotComponent/>  */}
+      <div className="main-layout">
+        <Header />
+        <div className="content">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/courses" element={<CoursesPage />} />
+            <Route path="/admissions" element={<AdmissionsPage />} />
+            <Route path="*" element={<NotFoundPage />} />
+          </Routes>
+          <ChatbotComponent/>
+        </div>
+        <Footer />
+      </div>
     </Router>
-    </>
   );
 }
-
 export default App;
+
